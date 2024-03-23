@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Lalezar;
+}
+body{
+    background: linear-gradient(#D8737F,#Ab6c82);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content:'';
+    height: 100%;
+    width: 100%;
+    background: yellow;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(30% at right 70%);
+    transition: 0.3s;
+}
+.design{
+    height: 80%;
+    width: 80%;
+    background:rgba(252, 187, 109, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+nav .logo{
+    color: rgb(10, 10, 87);
+    text-decoration: none;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    background-color: rgba(252, 187, 109, 0.8);
+    border-radius: 20px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 18px 8px;
+
+}
+nav ul li a{
+    color: #36475f;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: aqua;
+    padding: 4px;
+    border-radius: 20px;
+}
+nav ul li a:hover{
+    color:#685d79 ;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+}
+.content .text{
+    color:steelblue;
+    width: 40%;
+}
+.content .text h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.content .text p{
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+.content .photo{
+    width: 40%;
+    height: 70%;
+}
+.content .photo img{
+    width: 300px;
+    border-radius: 20px;
+}
+.content .photo img:hover{
+    scale: 1.2;
+    transition: 1s;
+}
+.content .photo img:not(:hover){
+    transition: 1s;
+}
+@font-face {
+    font-family: "Lalezar" ;
+    src: url(fonts/Lalezar-Regular.ttf);
+}
+@media (min-width:950px) and (max-width:1150px){
+    .content .photo img{
+        width: 200px;
+    }
+}
+@media (max-width:950px){
+    .content,nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .text{
+        width: 80%;
+        height: 40%;
+    }
+    .content .photo{
+        width: 50%;
+        height: 100%;
+    }
+    .content .photo img{
+        width: 150px;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    body::after{
+        transition: 0.3s;
+        clip-path: circle(50% at bottom);
+    }
+    nav .logo{
+        margin: auto;
+    }
+}
